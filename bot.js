@@ -52,7 +52,7 @@ client.on('message', message => {
     message.channel.send("Nice");
     }
   if (message.content.startsWith("G")) {
-    message.channel.send("GGGGGGGGGGG");
+    message.channel.send("wp");
     }
   
 });
