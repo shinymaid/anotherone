@@ -22,7 +22,7 @@ client.on('message', message => {
     	message.reply('pong');
   	}
     if(responseObject[message.content]) {
-    message.channel.reply(responseObject[message.content]);
+    message.reply(responseObject[message.content]);
     }
     if (message.content.startsWith(prefix + "help")) {
     message.channel.send("Sorry helps are not available at this time. Smt is still writing them :)");
