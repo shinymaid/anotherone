@@ -12,9 +12,9 @@ const responseObject = {
 };
 const swearWords = ["damn", "sucks", "fuck", "shit","lee","dick"];
 const newUsers = [];
-const cheerio = require('cheerio'),
+/*const cheerio = require('cheerio'),
       snekfetch = require('snekfetch'),
-      querystring = require('querystring');
+      querystring = require('querystring');*/
 
 let prefix = ".";
 
@@ -62,7 +62,7 @@ client.on('message', message => {
   if( swearWords.some(word => message.content.includes(word)) ) {
   message.reply("Language pls. FUCKER!");
     }
-  if(message.content.startsWith(prefix + "search")) {
+  /*if(message.content.startsWith(prefix + "search")) {
     async function googleCommand(msg, args) {
 
    
@@ -87,7 +87,7 @@ client.on('message', message => {
      searchMessage.edit('Li dwy shr ny dr lr :)');
   });
     }
-    } 
+    } */
 });
 
 client.on("guildMemberAdd", (member) => {
