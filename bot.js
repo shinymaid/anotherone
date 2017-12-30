@@ -66,7 +66,7 @@ client.on('message', message => {
     async function googleCommand(msg, args) {
 
    
-   let searchMessage = await <Message>.reply('Searching... Sec.');
+   let searchMessage = await <Message>.reply('Searching...');
    let searchUrl = `https://www.google.com/search?q=${encodeURIComponent(msg.content)}`;
 
    
@@ -80,7 +80,7 @@ client.on('message', message => {
 
       
       googleData = querystring.parse(googleData.replace('/url?', ''));
-      searchMessage.edit(`Result found!\n${googleData.q}`);
+      searchMessage.edit(`Ok...\n${googleData.q}`);
 
   
   }).catch((err) => {
