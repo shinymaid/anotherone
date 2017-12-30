@@ -10,6 +10,11 @@ const responseObject = {
   "hi": "hey! succ my d",
   "wut": "Nani?",
 };
+const swearWords = ["damn", "sucks", "fuck", "shit","lee","dick"];
+const newUsers = [];
+const cheerio = require('cheerio'),
+      snekfetch = require('snekfetch'),
+      querystring = require('querystring');
 
 let prefix = ".";
 
@@ -54,8 +59,56 @@ client.on('message', message => {
   if (message.content.startsWith("G")) {
     message.channel.send("wp");
     }
+  if( swearWords.some(word => message.content.includes(word)) ) {
+  message.reply("Language pls. FUCKER!");
+    }
+  if(message.content.startsWith(prefix + "search")) {
+    async function googleCommand(msg, args) {
+
+   
+   let searchMessage = await <Message>.reply('Searching... Sec.');
+   let searchUrl = `https://www.google.com/search?q=${encodeURIComponent(msg.content)}`;
+
+   
+   return snekfetch.get(searchUrl).then((result) => {
+
+      
+      let $ = cheerio.load(result.text);
+
+      
+      let googleData = $('.r').first().find('a').first().attr('href');
+
+      
+      googleData = querystring.parse(googleData.replace('/url?', ''));
+      searchMessage.edit(`Result found!\n${googleData.q}`);
+
   
+  }).catch((err) => {
+     searchMessage.edit('Li dwy shr ny dr lr :)');
+  });
+    }
+    } 
 });
 
-// THIS  MUST  BE  THIS  WAY
+client.on("guildMemberAdd", (member) => {
+  const guild = member.guild;
+  if (!newUsers[guild.id]) newUsers[guild.id] = new Discord.Collection();
+  newUsers[guild.id].set(member.id, member.user);
+
+  if (newUsers[guild.id].size > 10) {
+    const userlist = newUsers[guild.id].map(u => u.toString()).join(" ");
+    guild.channels.get(guild.id).send("Welcome! I mean lee lr loke dr lr :)!\n" + userlist);
+    newUsers[guild.id].clear();
+  }
+});
+
+client.on("guildMemberRemove", (member) => {
+  const guild = member.guild;
+  if (newUsers[guild.id].has(member.id)) newUsers.delete(member.id);
+});
+  client.on("error", (e) => console.error(e));
+  client.on("warn", (e) => console.warn(e));
+  client.on("debug", (e) => console.info(e));
+
+
 client.login(process.env.BOT_TOKEN);
