@@ -19,7 +19,7 @@ const newUsers = [];
 /*const cheerio = require('cheerio'),
       snekfetch = require('snekfetch'),
       querystring = require('querystring');*/
-const name = ["smt","kkz","arkar","oak","kst","sethu","mmk","everyone"];
+/*const name = ["smt","kkz","arkar","oak","kst","sethu","mmk","everyone"];*/
 let prefix = ".";
 
 client.on('ready', () => {
@@ -36,7 +36,7 @@ client.on('message', message => {
     if (message.content.startsWith(prefix + "help")) {
     message.channel.send("Sorry helps are not available at this time. Smt is still writing them :)");
     } 
-    if (message.content.startsWith(prefix + name)) {
+    /*if (message.content.startsWith(prefix + name)) {
      if(name === "smt"){
        message.channel.send("09250354704");
      }else if(name === "oak"){
@@ -60,7 +60,37 @@ client.on('message', message => {
        message.channel.send("arkar - NULL");
        message.channel.send("kst - NULL");
      }
-    } 
+    }*/
+    if(message.content.startsWith(prefix + "smt")){
+       message.channel.send("09250354704");
+     } 
+    if(message.content.startsWith(prefix + "oak")){
+       message.channel.send("09421037602");
+     } 
+    if(message.content.startsWith(prefix + "sethu")){
+       message.channel.send("09429884734");
+     } 
+    if(message.content.startsWith(prefix + "mmk")){
+       message.channel.send("09445665313");
+     } 
+    if(message.content.startsWith(prefix + "kkz")){
+       message.channel.send("09451321885");
+     } 
+    if(message.content.startsWith(prefix + "arkar")){
+       message.channel.send("idk");
+     }
+     if(message.content.startsWith(prefix + "kst")){
+       message.channel.send("idk");
+     }
+    if(message.content.startsWith(prefix + "about")){
+       message.channel.send("smt - 09250354704");
+       message.channel.send("oak - 09421037602");
+       message.channel.send("kkz - 09451321885");
+       message.channel.send("mmk - 09445665313");
+       message.channel.send("sethu - 09429884734");
+       message.channel.send("arkar - NULL");
+       message.channel.send("kst - NULL");
+     }
     if (message.content.startsWith(prefix + "about")) {
     message.channel.send("I'm self bot of soe min thant and I maintains the gp. U can also give me orders and commands but most are still under development. Basically I'm smt ;). Type '.help' for more.");
     } 
