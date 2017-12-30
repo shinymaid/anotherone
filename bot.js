@@ -82,7 +82,7 @@ client.on('message', message => {
      if(message.content.startsWith(prefix + "kst")){
        message.channel.send("idk");
      }
-    if(message.content.startsWith(prefix + "about")){
+    if(message.content.startsWith(prefix + "everyone")){
        message.channel.send("smt - 09250354704");
        message.channel.send("oak - 09421037602");
        message.channel.send("kkz - 09451321885");
