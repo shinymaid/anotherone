@@ -14,7 +14,7 @@ const responseObject = {
   "Ply": "Get a life",
   "Lol": "is that so funny?",
 };
-const swearWords = ["damn", "sucks", "fuck", "shit","lee","dick"];
+const swearWords = ["damn", "sucks", "fuck", "shit","Sp","dick","sp"];
 const newUsers = [];
 /*const cheerio = require('cheerio'),
       snekfetch = require('snekfetch'),
@@ -89,7 +89,7 @@ client.on('message', message => {
        message.channel.send("mmk - 09445665313");
        message.channel.send("sethu - 09429884734");
        message.channel.send("arkar - NULL");
-       message.channel.send("kst - NULL");
+       message.channel.send("kst - 09978790995");
      }
     if (message.content.startsWith(prefix + "about")) {
     message.channel.send("I'm self bot of soe min thant and I maintains the gp. U can also give me orders and commands but most are still under development. Basically I'm smt ;). Type '.help' for more.");
@@ -115,8 +115,8 @@ client.on('message', message => {
   if (message.content.startsWith("good")) {
     message.channel.send("Nice");
     }
-  if (message.content.startsWith("G")) {
-    message.channel.send("wp");
+  if (message.content.startsWith("Low mad")) {
+    message.channel.send("Tse ko low mad");
     }
   if( swearWords.some(word => message.content.includes(word)) ) {
   message.reply("Language pls. FUCKER!");
