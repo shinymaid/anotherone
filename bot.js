@@ -1,18 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const responseObject = {
-  "lol": "hahahahahahaah...",
   "Wat": "Nani?",
   "Wut": "Nani?",
   "Omae wa mou shindeiru": "Nani!!!",
   "ply?": "Lifeless",
   "ply": "Get a life",
-  "hi": "hey! succ my d",
-  "Hi": "hey! succ my d",
-  "wut": "Nani?",
-  "Wut": "Nani?",
-  "Ply": "Get a life",
-  "Lol": "is that so funny?",
 };
 const swearWords = ["damn", "sucks", "fuck", "shit","Sp","dick","sp"];
 const newUsers = [];
