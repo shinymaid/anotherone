@@ -1,6 +1,6 @@
 const sqlite = require("sqlite");
 const SQL = require("sql-template-strings");
-const dbopen = sqlite.open('./haseul_data/reminders.db');
+const dbopen = sqlite.open('./maid_data/reminders.db');
 
 dbopen.then(db => {
     db.run(SQL`
