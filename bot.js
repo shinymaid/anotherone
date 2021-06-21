@@ -77,10 +77,10 @@ client.on('message', message => {
        message.channel.send("09451321885");
      } 
     if(message.content.startsWith(prefix + "arkar")){
-       message.channel.send("idk");
+       message.channel.send("09428632021");
      }
      if(message.content.startsWith(prefix + "kst")){
-       message.channel.send("idk");
+       message.channel.send("09771028800");
      }
     if(message.content.startsWith(prefix + "everyone")){
        message.channel.send("smt - 09250354704");
@@ -88,11 +88,11 @@ client.on('message', message => {
        message.channel.send("kkz - 09451321885");
        message.channel.send("mmk - 09445665313");
        message.channel.send("sethu - 09429884734");
-       message.channel.send("arkar - NULL");
-       message.channel.send("kst - 09978790995");
+       message.channel.send("arkar - 09428632021");
+       message.channel.send("kst - 09771028800");
      }
     if (message.content.startsWith(prefix + "about")) {
-    message.channel.send("I'm self bot of soe min thant and I maintains the gp. U can also give me orders and commands but most are still under development. Basically I'm smt ;). Type '.help' for more.");
+    message.channel.send("I'm self bot of soe min thant and I maintain the gp. U can also give me orders and commands but most are still under development. Basically I'm smt ;). Type '.help' for more.");
     } 
     if (message.content.startsWith("morning")) {
     message.channel.reply("No one cares.");
@@ -114,9 +114,6 @@ client.on('message', message => {
     }
   if (message.content.startsWith("good")) {
     message.channel.send("Nice");
-    }
-  if (message.content.startsWith("Low mad")) {
-    message.channel.send("Tse ko low mad");
     }
   if( swearWords.some(word => message.content.includes(word)) ) {
   message.reply("Language pls. FUCKER!");
